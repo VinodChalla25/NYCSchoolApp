@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bv1-Bp-EMn">
-                                <rect key="frame" x="0.0" y="94" width="375" height="684"/>
+                                <rect key="frame" x="0.0" y="147" width="375" height="631"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reuseIdentifier" textLabel="vli-bI-3HD" detailTextLabel="gfs-69-OUL" rowHeight="90" style="IBUITableViewCellStyleSubtitle" id="wDs-K9-GbP">
@@ -51,18 +51,32 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="5Z6-Xa-mkn"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-t8-ZPq">
+                                <rect key="frame" x="16" y="103" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NTo-oX-7tN"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="A19-cD-UUp"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bv1-Bp-EMn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AmF-4d-nQg"/>
-                            <constraint firstItem="Bv1-Bp-EMn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K1p-XC-6fd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bv1-Bp-EMn" secondAttribute="trailing" id="mA2-Sb-4rk"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bv1-Bp-EMn" secondAttribute="bottom" id="vvt-Rk-40P"/>
+                            <constraint firstItem="vqJ-t8-ZPq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1x6-Ec-rRW"/>
+                            <constraint firstItem="Bv1-Bp-EMn" firstAttribute="top" secondItem="vqJ-t8-ZPq" secondAttribute="bottom" id="LZe-yc-2qc"/>
+                            <constraint firstItem="vqJ-t8-ZPq" firstAttribute="centerX" secondItem="Bv1-Bp-EMn" secondAttribute="centerX" id="Pg8-Vi-RCK"/>
+                            <constraint firstItem="vqJ-t8-ZPq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UnX-u1-Bhx"/>
+                            <constraint firstItem="Bv1-Bp-EMn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZVo-L7-9fx"/>
+                            <constraint firstItem="Bv1-Bp-EMn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s2y-Jc-jXj"/>
+                            <constraint firstItem="vqJ-t8-ZPq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="ugp-0o-6bv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NYCSchoolList" id="8gn-mQ-9Fe"/>
                     <connections>
+                        <outlet property="searchBar" destination="vqJ-t8-ZPq" id="Byh-4A-ucR"/>
                         <outlet property="tableView" destination="Bv1-Bp-EMn" id="Dsa-Bg-iea"/>
                     </connections>
                 </viewController>
